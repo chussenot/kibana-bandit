@@ -35,7 +35,7 @@ Architecture
 
 The following illustrates the architecture deployed by the compose file. All components are deployed to a single machine.
 
-![stack](screens/stack.png)
+![stack](screens/docker-compose.png)
 
 Installation
 ------------
