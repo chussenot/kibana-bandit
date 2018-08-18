@@ -27,9 +27,9 @@ Ensuring the following ports are free on the host, as they are mounted by the co
 
 ### Supported versions
 
-The images have been tested on Docker 17.09.0-ce-rc1 and docker-compose 1.16.1
-The docker-compose file uses docker-compose v2.1 syntax.
-All Elastic Stack components are version 5.6.1, see `.env` file.
+The images have been tested on Docker 18.06.0-ce and docker-compose `1.22.0`
+The docker-compose file uses docker-compose `v2.1` syntax.
+All Elastic Stack components are version `6.3.2`, see `.env` file.
 
 Architecture
 ------------
