@@ -1,3 +1,10 @@
 require './config/boot.rb'
-run ArmedBandit.new
+use ElasticAPM::Middleware
 
+ElasticAPM.start(
+  app: ArmedBandit,
+  config_file: 'config/elastic_apm.yml'
+)
+
+run ArmedBandit.new
+at_exit { ElasticAPM.stop }

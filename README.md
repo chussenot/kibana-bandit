@@ -23,6 +23,7 @@ Ensuring the following ports are free on the host, as they are mounted by the co
     - `5601` (Kibana)
     - `9200,9300` (Elasticsearch)
     - `9292` (Bandit application)
+    - `8200` (APM server)
 
 ### Supported versions
 

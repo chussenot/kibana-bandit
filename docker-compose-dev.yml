@@ -69,3 +69,13 @@ services:
       - 9300:9300/tcp
     healthcheck:
       test: ['CMD', 'curl', '-f', '-u', 'elastic:changeme', 'http://localhost:9200']
+  apm-server:
+    image: docker.elastic.co/apm/apm-server:${ELASTIC_VERSION}
+    volumes:
+      - ./config/apm-server.yml:/usr/share/apm-server/apm-server.yml
+    ports:
+      - 8200:8200/tcp
+    depends_on:
+      kibana:
+        condition: service_healthy
+
