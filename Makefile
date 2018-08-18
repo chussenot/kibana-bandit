@@ -7,10 +7,10 @@ help: ## Show this help.
 
 start: ## Start the demo stack
 	@echo build a new docker image with GIT_SHA1 ${sha1}
-	GIT_SHA1=${sha1} docker-compose -f docker-compose-dev.yml up --build -d
+	GIT_SHA1=${sha1} docker-compose -f docker-compose-dev.yml -f cadvisor.yml up --build -d
 
 stop: ## Stop the demo stack and remove the Elasticsearch volume
-	GIT_SHA1=${sha1} docker-compose -f docker-compose-dev.yml down
+	GIT_SHA1=${sha1} docker-compose -f docker-compose-dev.yml -f cadvisor.yml down
 
 proxy: ## Start an ngrok proxy to the bandit server
 	ngrok http 9292
